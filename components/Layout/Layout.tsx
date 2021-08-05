@@ -3,9 +3,9 @@ import React from 'react';
 import Header from './Header/Header';
 import Head from "next/head";
 const Layout = ({ children }) => (
-  <div>
+  <div style={{marginTop: "2%", overflow: 'hidden'}}>
      <Head>
-        <title>MelnickandSons</title>
+        <title>Melnick & Son's | Painting just got a whole lot easier</title>
       </Head>
     {/* header */}
     <Header />

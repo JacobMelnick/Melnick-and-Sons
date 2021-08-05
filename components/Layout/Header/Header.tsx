@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { styled } from "@material-ui/core/styles";
-import { Grid, Stack } from "@material-ui/core";
+import { Grid, Stack, Typography } from "@material-ui/core";
 
 const PREFIX = "MyCard";
 
@@ -36,16 +36,72 @@ const Header = () => (
         />
       </Grid>
       <Grid item xs={12}>
-        <Stack direction="row" spacing={2}>
-          <Link href="/">Home</Link>
-
-          <Link href="/paintSelection/paintSelection">Paint Selection</Link>
-
-          <Link href="/portfolio/portfolio">Portfolio</Link>
-
-          <Link href="/testimonials/testimonials">Testimonials</Link>
-
-          <Link href="/contactUs/contactUs">Contact Us</Link>
+        <Stack direction="row" spacing={5}>
+          <Typography variant="h5" color="inherit">
+            <Link href="/">
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  opacity: ".60",
+                }}
+              >
+                Home
+              </a>
+            </Link>
+          </Typography>
+          <Typography variant="h5" color="inherit">
+            <Link href="/paintSelection/paintSelection">
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  opacity: ".60",
+                }}
+              >
+                Paint Selection
+              </a>
+            </Link>
+          </Typography>
+          <Typography variant="h5" color="inherit">
+            <Link href="/portfolio/portfolio">
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  opacity: ".60",
+                }}
+              >
+                Portfolio
+              </a>
+            </Link>
+          </Typography>
+          <Typography variant="h5" color="inherit">
+            <Link href="/testimonials/testimonials">
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  opacity: ".60",
+                }}
+              >
+                Testimonials
+              </a>
+            </Link>
+          </Typography>
+          <Typography variant="h5" color="inherit">
+            <Link href="/contactUs/contactUs">
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  opacity: ".60",
+                }}
+              >
+                Contact Us
+              </a>
+            </Link>
+          </Typography>
         </Stack>
       </Grid>
     </Grid>
