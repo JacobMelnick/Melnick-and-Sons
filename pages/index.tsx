@@ -68,13 +68,22 @@ const useStyles = makeStyles(
       }
     },
     sherwin: {
-      backgroundImage: 'url("public/images/logos/Sherwin.png")',
+      backgroundImage: 'url("/images/logos/Sherwin.png")',
+      backgroundRepeat: "no-Repeat",
+      backgroundSize: "10%",
+      backgroundPosition: "center",
+      height: 400,
+    },
+    truckHome: {
+      backgroundImage: 'url("/images/logos/TrucksHome.jpg")',
       backgroundRepeat: "no-Repeat",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      width: "50vw",
-      height: 600,
-    },  
+      width: "100vw",
+      height: 400,
+      paddingTop: 195,
+      paddingBottom: 242,
+    }
   }),
   { name: "MuiExample_Component" }
 );
@@ -257,7 +266,7 @@ export default function Home(props) {
           <Grid item xs={12}>
             <Typography
               variant="h4"
-              style={{ fontWeight: 800, textAlign: "center" }}
+              style={{ fontWeight: 800, textAlign: "center", paddingBottom: '1%' }}
             >
               Partners
             </Typography>
@@ -274,15 +283,18 @@ export default function Home(props) {
               paint selection.
             </Typography>
           </Grid>
-          <Grid item xs={12} style={{ textAlign: "center" }}>
+          <Grid item xs={12} style={{ textAlign: "center", paddingBottom: '4%' }}>
             <Button
               className={classes.paintButton}
             >
               Color Finder
-              <ArrowForwardIosIcon className={classes.arrow}></ArrowForwardIosIcon>
+              <ArrowForwardIosIcon ></ArrowForwardIosIcon>
             </Button>
           </Grid>
         </Grid>
+        <div className={classes.truckHome}>
+
+        </div>
       </Grid>
     </Layout>
   );
