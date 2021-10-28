@@ -1,7 +1,8 @@
 import Layout from "../components/Layout/Layout";
 import { makeStyles, createStyles } from "@material-ui/styles";
 import { Grid, Stack, Typography } from "@material-ui/core";
-import { Height } from "@material-ui/icons";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Button from '@mui/material/Button';
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -14,7 +15,7 @@ const useStyles = makeStyles(
       position: "relative",
       width: "100vw",
       height: 600,
-      marginTop: "1%",
+      paddingTop: "1%",
     },
     photo: {
       position: "absolute",
@@ -54,21 +55,38 @@ const useStyles = makeStyles(
       display: "flex",
       justifyContent: "center",
     },
+    paintButton: {
+      border: "3px solid #2ea3f2",
+      maxWidth: "200px",
+      maxHeight: "60px",
+      minWidth: "200px",
+      minHeight: "60px",
+      fontSize: 18,
+      fontWeight: 240,
+      "&:hover" : {
+        border: 0,
+      }
+    },
+    sherwin: {
+      backgroundImage: 'url("public/images/logos/Sherwin.png")',
+      backgroundRepeat: "no-Repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: "50vw",
+      height: 600,
+    },  
   }),
   { name: "MuiExample_Component" }
 );
 
+
+
 export default function Home(props) {
   const classes = useStyles(props);
+
   return (
     <Layout>
-      <Grid
-        className={classes.root}
-        container
-        spacing={1}
-        direction="column"
-        rowSpacing={1}
-      >
+      <Grid className={classes.root} container>
         <div className={classes.rootImage}>
           <div className={classes.photo}>
             <div className={classes.imageText}>
@@ -83,14 +101,14 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <Grid item xs={12} style={{ marginTop: "5%" }}>
+        <Grid item xs={12} style={{ paddingTop: "5%" }}>
           <Stack direction="column" spacing={4} alignItems="center">
             <Typography variant="h2" style={{ fontWeight: 530 }}>
               What We Do
             </Typography>
             <Typography
               variant="h5"
-              style={{ width: "28%", textAlign: "center" }}
+              style={{ width: "28%", textAlign: "center", fontWeight: 300 }}
             >
               At Melnick & Son’s, we believe in superior craftsmanship and
               customer satisfaction above all else. We are a licensed, bonded
@@ -98,20 +116,30 @@ export default function Home(props) {
               community.
             </Typography>
           </Stack>
-          <Grid item xs={12} style={{ marginTop: "2%" }}>
-            <Stack direction="row" justifyContent="space-Evenly" spacing={1}>
+        </Grid>
+        <Grid
+          container
+          // item
+          spacing={1}
+          xs={12}
+          justifyContent="center"
+          alignItems="flex-start"
+          style={{ paddingBottom: "5%", paddingTop: "3%" }}
+        >
+          <Grid item xs={12} md={4} container spacing={2}>
+            <Grid item xs={12}>
               <Typography
                 variant="h6"
                 style={{ fontWeight: 550, textAlign: "center" }}
               >
                 Our Experience
               </Typography>
-              <Stack direction='row'>
+            </Grid>
+            <Grid item xs={12}>
               <Typography
                 variant="h5"
                 style={{
                   fontWeight: 300,
-                  width: "15%",
                   textAlign: "center",
                   fontSize: 18,
                 }}
@@ -122,19 +150,23 @@ export default function Home(props) {
                 and are dedicated to bringing you a quality paint job, inside
                 and out.
               </Typography>
-              </Stack>
-
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={4} container spacing={2}>
+            <Grid item xs={12}>
               <Typography
                 variant="h6"
                 style={{ fontWeight: 550, textAlign: "center" }}
               >
                 The Community
               </Typography>
+            </Grid>
+
+            <Grid item xs={12}>
               <Typography
                 variant="h5"
                 style={{
                   fontWeight: 300,
-                  width: "15%",
                   textAlign: "center",
                   fontSize: 18,
                 }}
@@ -144,17 +176,22 @@ export default function Home(props) {
                 resident’s ourselves for the past 40 years and thoroughly enjoy
                 every opportunity to improve the area.
               </Typography>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={4} container spacing={2}>
+            <Grid item xs={12}>
               <Typography
                 variant="h6"
                 style={{ fontWeight: 550, textAlign: "center" }}
               >
                 Contact Us to Learn More
               </Typography>
+            </Grid>
+            <Grid item xs={12}>
               <Typography
                 variant="h5"
                 style={{
                   fontWeight: 300,
-                  width: "15%",
                   textAlign: "center",
                   fontSize: 18,
                 }}
@@ -165,17 +202,10 @@ export default function Home(props) {
                 along with a free painting estimate and personalized project
                 assessment.
               </Typography>
-            </Stack>
-            <Stack
-              direction="row"
-              spacing={1}
-              // alignItems="center",
-              justifyContent="space-Evenly"
-              style={{ marginTop: ".5%" }}
-            ></Stack>
+            </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12}>
+        <Grid container item xs={12} style={{ paddingBottom: "4%" }}>
           <Stack direction="row">
             <div className={classes.firstHouse}></div>
             <Stack
@@ -216,6 +246,42 @@ export default function Home(props) {
               </Typography>
             </Stack>
           </Stack>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          spacing={4}
+        >
+          <Grid item xs={12}>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: 800, textAlign: "center" }}
+            >
+              Partners
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <div className={classes.sherwin}></div>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography
+              variant="h6"
+              style={{ textAlign: "center", fontSize: 25, fontWeight: 240 }}
+            >
+              Visit the Sherwin Williams Color Finder to help you with your next
+              paint selection.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} style={{ textAlign: "center" }}>
+            <Button
+              className={classes.paintButton}
+            >
+              Color Finder
+              <ArrowForwardIosIcon className={classes.arrow}></ArrowForwardIosIcon>
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </Layout>
