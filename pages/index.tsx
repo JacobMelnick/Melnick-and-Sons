@@ -340,7 +340,7 @@ export default function Home(props) {
           <Grid
             item
             xs={12}
-            style={{ textAlign: "center", marginBottom: "5%" }}
+            style={{ textAlign: "center", paddingBottom: "5%" }}
           >
             <Link href="/contactUs/contactUs">
               <Button size="large" className={classes.contact}>
