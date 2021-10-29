@@ -3,6 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { styled } from "@material-ui/core/styles";
 import { Grid, Stack, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/styles";
+
+const useStyles = makeStyles(() => ({
+  headers: {
+    color: 'blue',
+    // "&:hover": {
+    //   opacity: 30,
+    // },
+  },
+}),
+{ name: "MuiExample_Component" }
+)
 
 const PREFIX = "MyCard";
 
@@ -16,11 +28,13 @@ const Root = styled("div")((theme) => ({
     width: "100vw",
     background: "#fff",
   },
+  
 }));
 
 const Header = (props) => {
   const [clicked, setClicked] = useState(0);
   console.log(clicked);
+  const classHeaders = useStyles(props);
 
   const wasClicked = (e) => {
     console.log(e.target.innerHTML);
@@ -56,7 +70,7 @@ const Header = (props) => {
         </Grid>
         <Grid item xs={12}>
           <Stack direction="row" spacing={5}>
-            <Typography variant="h5" color="inherit">
+            <Typography variant="h5" className={classHeaders.headers}>
               <Link href="/">
                 <a
                   onClick={(e) => {
@@ -65,7 +79,7 @@ const Header = (props) => {
                   style={{
                     textDecoration: "none",
                     color: clicked === 1 ? "red" : "black",
-                    opacity: ".80",
+                    opacity: ".70",
                   }}
                 >
                   Home
@@ -81,7 +95,7 @@ const Header = (props) => {
                   style={{
                     textDecoration: "none",
                     color: clicked === 2 ? "red" : "black",
-                    opacity: ".80",
+                    opacity: ".70",
                   }}
                 >
                   Paint Selection
@@ -97,7 +111,7 @@ const Header = (props) => {
                   style={{
                     textDecoration: "none",
                     color: clicked === 3 ? "red" : "black",
-                    opacity: ".80",
+                    opacity: ".70",
                   }}
                 >
                   Portfolio
@@ -113,7 +127,7 @@ const Header = (props) => {
                   style={{
                     textDecoration: "none",
                     color: clicked === 4 ? "red" : "black",
-                    opacity: ".80",
+                    opacity: ".70",
                   }}
                 >
                   Testimonials
@@ -129,7 +143,7 @@ const Header = (props) => {
                   style={{
                     textDecoration: "none",
                     color: clicked === 5 ? "red" : "black",
-                    opacity: ".80",
+                    opacity: ".70",
                   }}
                 >
                   Contact Us

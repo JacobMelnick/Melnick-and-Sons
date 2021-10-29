@@ -1,8 +1,9 @@
 import Layout from "../components/Layout/Layout";
-import { makeStyles, createStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles";
 import { Grid, Stack, Typography } from "@material-ui/core";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Button from '@mui/material/Button';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Button from "@mui/material/Button";
+import Link from "next/link";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -63,9 +64,21 @@ const useStyles = makeStyles(
       minHeight: "60px",
       fontSize: 18,
       fontWeight: 240,
-      "&:hover" : {
+      "&:hover": {
         border: 0,
-      }
+      },
+    },
+    contact: {
+      border: "3px solid #2ea3f2",
+      maxWidth: "200px",
+      maxHeight: "60px",
+      minWidth: "200px",
+      minHeight: "60px",
+      fontSize: 18,
+      fontWeight: 240,
+      "&:hover": {
+        border: 0,
+      },
     },
     sherwin: {
       backgroundImage: 'url("/images/logos/Sherwin.png")',
@@ -83,12 +96,10 @@ const useStyles = makeStyles(
       height: 400,
       paddingTop: 195,
       paddingBottom: 242,
-    }
+    },
   }),
   { name: "MuiExample_Component" }
 );
-
-
 
 export default function Home(props) {
   const classes = useStyles(props);
@@ -266,7 +277,11 @@ export default function Home(props) {
           <Grid item xs={12}>
             <Typography
               variant="h4"
-              style={{ fontWeight: 800, textAlign: "center", paddingBottom: '1%' }}
+              style={{
+                fontWeight: 800,
+                textAlign: "center",
+                paddingBottom: "1%",
+              }}
             >
               Partners
             </Typography>
@@ -283,18 +298,58 @@ export default function Home(props) {
               paint selection.
             </Typography>
           </Grid>
-          <Grid item xs={12} style={{ textAlign: "center", paddingBottom: '4%' }}>
-            <Button
-              className={classes.paintButton}
-            >
-              Color Finder
-              <ArrowForwardIosIcon ></ArrowForwardIosIcon>
-            </Button>
+          <Grid
+            item
+            xs={12}
+            style={{ textAlign: "center", paddingBottom: "4%" }}
+          >
+            <Link href="/paintSelection/paintSelection">
+              <Button className={classes.paintButton}>
+                Color Finder
+                <ArrowForwardIosIcon></ArrowForwardIosIcon>
+              </Button>
+            </Link>
           </Grid>
         </Grid>
-        <div className={classes.truckHome}>
-
-        </div>
+        <div className={classes.truckHome}></div>
+        <Grid
+          container
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          spacing={5}
+          marginTop="3%"
+        >
+          <Grid item xs={12}>
+            <Typography variant="h4" style={{ textAlign: "center" }}>
+              About Us
+            </Typography>
+          </Grid>
+          <Grid item xs={5} md={6} lg={5}>
+            <Typography
+              variant="h6"
+              style={{ textAlign: "center", fontWeight: 300 }}
+            >
+              In 2009, after years in landscaping, Todd Melnick founded Melnick
+              & Son’s with the goal of providing quality painting services for
+              the Whidbey Island community and surrounding areas. Since then,
+              we’ve expanded our work to include indoor and outdoor paint jobs,
+              deck and stain work.
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            style={{ textAlign: "center", marginBottom: "5%" }}
+          >
+            <Link href="/contactUs/contactUs">
+              <Button size="large" className={classes.contact}>
+                Contact Us
+                <ArrowForwardIosIcon></ArrowForwardIosIcon>
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
       </Grid>
     </Layout>
   );
