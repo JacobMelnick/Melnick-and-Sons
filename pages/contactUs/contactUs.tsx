@@ -44,12 +44,12 @@ const contactUs: React.FC<contactUsProps> = (props) => {
             justifyContent="center"
           >
             <Grid item xs={12}>
-              <Typography variant="h2" style={{ fontWeight: 500, textAlign: 'center' }}>
+              <Typography variant="h2" style={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Montserrat', fontSize: 48, letterSpacing: 3, lineHeight: '1.3em' }}>
                 CONTACT US
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="h5" style={{ fontWeight: 545, textAlign: 'center' }}>
+              <Typography variant="h5" style={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Montserrat' }}>
                 <LocationOnIcon></LocationOnIcon>
                 Address
               </Typography>
@@ -61,7 +61,7 @@ const contactUs: React.FC<contactUsProps> = (props) => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="h5" style={{ fontWeight: 545, textAlign: 'center' }}>
+              <Typography variant="h5" style={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Montserrat' }}>
                 <LocalPhoneIcon></LocalPhoneIcon>
                 Phone
               </Typography>
@@ -73,7 +73,7 @@ const contactUs: React.FC<contactUsProps> = (props) => {
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant="h5" style={{ fontWeight: 545, textAlign: 'center' }}>
+              <Typography variant="h5" style={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Montserrat' }}>
                 <EmailIcon></EmailIcon>
                 Email
               </Typography>
