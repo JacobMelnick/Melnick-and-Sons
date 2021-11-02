@@ -1,8 +1,6 @@
-import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
 import { makeStyles } from "@material-ui/styles";
-import { Grid, Stack, Typography } from "@material-ui/core";
-import { ClassNames } from "@emotion/react";
+import { Grid, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -86,7 +84,12 @@ const paintSelection = (props) => {
                 <Grid item xs={12}>
                   <Typography
                     variant="h5"
-                    style={{ textAlign: "center", fontWeight: 200, fontSize: 29, paddingBottom: '3%' }}
+                    style={{
+                      textAlign: "center",
+                      fontWeight: 200,
+                      fontSize: 29,
+                      paddingBottom: "3%",
+                    }}
                   >
                     As painters, we make it our mission to select the best
                     quality paints for our customers. We’ve looked high and low
@@ -104,7 +107,7 @@ const paintSelection = (props) => {
                 </Grid>
                 <Grid container item xs={12} spacing={3} direction="row">
                   <Grid item xs={6}>
-                    <Typography variant="h5" style={{ textAlign: "center",  }}>
+                    <Typography variant="h5" style={{ textAlign: "center" }}>
                       For those looking for the absolute best in painting
                       products, we highly recommend Sherwin Williams. They are
                       one of the oldest and largest painting companies in the
@@ -121,8 +124,17 @@ const paintSelection = (props) => {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Grid item xs={12} justifyContent="center" alignItems="center" style={{paddingTop: '8%'}}>
-                  <Typography variant="h5" style={{ textAlign: "center", fontSize: 25 }}>
+                <Grid
+                  item
+                  xs={12}
+                  justifyContent="center"
+                  alignItems="center"
+                  style={{ paddingTop: "8%" }}
+                >
+                  <Typography
+                    variant="h5"
+                    style={{ textAlign: "center", fontSize: 25 }}
+                  >
                     No matter what type of paint you prefer, we are committed to
                     providing the best services in the application of any
                     product.
