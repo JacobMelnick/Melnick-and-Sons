@@ -9,7 +9,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 const useStyles = makeStyles(
   (theme) => ({
     root: {
-      position: "relative",
+      // position: "relative",
       height: "100%",
       paddingTop: "5%",
     },

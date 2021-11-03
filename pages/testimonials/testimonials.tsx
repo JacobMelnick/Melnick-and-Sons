@@ -1,8 +1,9 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 import { makeStyles } from "@material-ui/styles";
-import { Grid, Stack, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import Card from "@mui/material/Card";
+import Avatar from '@mui/material/Avatar';
 
 type TestimonialsProps = {};
 
@@ -36,10 +37,10 @@ const useStyles = makeStyles(
       backgroundSize: "100%",
       backgroundPosition: "center",
       height: 100,
-      borderRadius: "90px",
+      borderRadius: "100%",
     },
     moses: {
-      backgroundImage: 'url("/images/testimonials/moses.jpg)',
+      backgroundImage: 'url("/images/testimonials/moses.jpg")',
       backgroundRepeat: "no-Repeat",
       backgroundSize: "100%",
       backgroundPosition: "center",
@@ -71,15 +72,15 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             lineHeight: "1em",
             letterSpacing: 2,
             textAlign: "center",
-            paddingBottom: "1%",
+            paddingBottom: "2%",
           }}
         >
           Our Testimonials:
         </Typography>
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
-            <Grid item xs={2}>
-              <div className={classes.winhelm}></div>
+            <Grid item xs={2} >
+            <Avatar alt="winhelm" src="/images/testimonials/winhelm.jpg"  sx={{ width: 110, height: 110}} />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
@@ -110,7 +111,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
             <Grid item xs={2}>
-              <div className={classes.cleef}></div>
+            <Avatar alt="winhelm" src="/images/testimonials/cleef.jpg"  sx={{ width: 110, height: 110}} />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
@@ -143,7 +144,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
             <Grid item xs={2}>
-              <div className={classes.moses}></div>
+            <Avatar alt="winhelm" src="/images/testimonials/moses.jpg"  sx={{ width: 110, height: 110}} />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
