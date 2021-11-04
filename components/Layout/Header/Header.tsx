@@ -3,18 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { styled } from "@material-ui/core/styles";
 import { Grid, Stack, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-
-const useStyles = makeStyles(() => ({
-  headers: {
-    color: 'blue',
-    // "&:hover": {
-    //   opacity: 30,
-    // },
-  },
-}),
-{ name: "MuiExample_Component" }
-)
+import { useRouter } from "next/router";
 
 const PREFIX = "MyCard";
 
@@ -24,32 +13,13 @@ const classes = {
 
 const Root = styled("div")((theme) => ({
   [`&.${classes.root}`]: {
-    // height: 200,
     width: "100vw",
     background: "#fff",
   },
-  
 }));
 
-const Header = (props) => {
-  const [clicked, setClicked] = useState(0);
-  console.log(clicked);
-  const classHeaders = useStyles(props);
-
-  const wasClicked = (e) => {
-    console.log(e.target.innerHTML);
-    if (e.target.innerHTML === "Home") {
-      setClicked(1);
-    } else if (e.target.innerHTML === "Paint Selection") {
-      setClicked(2);
-    } else if (e.target.innerHTML === "Portfolio") {
-      setClicked(3);
-    } else if (e.target.innerHTML === "Testimonials") {
-      setClicked(4);
-    } else if (e.target.innerHTML === "Contact Us") {
-      setClicked(5);
-    }
-  };
+const Header = () => {
+  const router = useRouter();
 
   return (
     <Root className={classes.root}>
@@ -69,16 +39,17 @@ const Header = (props) => {
           />
         </Grid>
         <Grid item xs={12}>
+        
           <Stack direction="row" spacing={5}>
-            <Typography variant="h5" className={classHeaders.headers}>
+            <Typography
+              variant="h5"
+              className={router.pathname == "/" ? "active" : ""}
+            >
               <Link href="/">
                 <a
-                  onClick={(e) => {
-                    wasClicked(e);
-                  }}
                   style={{
                     textDecoration: "none",
-                    color: clicked === 1 ? "red" : "black",
+                    color: router.pathname === "/" ? "red" : "black",
                     opacity: ".70",
                   }}
                 >
@@ -86,15 +57,16 @@ const Header = (props) => {
                 </a>
               </Link>
             </Typography>
-            <Typography variant="h5" color="inherit">
+            <Typography
+              variant="h5"
+              color="inherit"
+              className={router.pathname == "/paintSelection/paintSelection" ? "active" : ""}
+            >
               <Link href="/paintSelection/paintSelection">
                 <a
-                  onClick={(e) => {
-                    wasClicked(e);
-                  }}
                   style={{
                     textDecoration: "none",
-                    color: clicked === 2 ? "red" : "black",
+                    color: router.pathname === "/paintSelection/paintSelection" ? "red" : "black",
                     opacity: ".70",
                   }}
                 >
@@ -102,15 +74,16 @@ const Header = (props) => {
                 </a>
               </Link>
             </Typography>
-            <Typography variant="h5" color="inherit">
+            <Typography
+              variant="h5"
+              color="inherit"
+              className={router.pathname == "/portfolio/portfolio" ? "active" : ""}
+            >
               <Link href="/portfolio/portfolio">
                 <a
-                  onClick={(e) => {
-                    wasClicked(e);
-                  }}
                   style={{
                     textDecoration: "none",
-                    color: clicked === 3 ? "red" : "black",
+                    color: router.pathname === "/portfolio/portfolio" ? "red" : "black",
                     opacity: ".70",
                   }}
                 >
@@ -118,15 +91,16 @@ const Header = (props) => {
                 </a>
               </Link>
             </Typography>
-            <Typography variant="h5" color="inherit">
+            <Typography
+              variant="h5"
+              color="inherit"
+              className={router.pathname == "/testimonials/testimonials" ? "active" : ""}
+            >
               <Link href="/testimonials/testimonials">
                 <a
-                  onClick={(e) => {
-                    wasClicked(e);
-                  }}
                   style={{
                     textDecoration: "none",
-                    color: clicked === 4 ? "red" : "black",
+                    color: router.pathname === "/testimonials/testimonials" ? "red" : "black",
                     opacity: ".70",
                   }}
                 >
@@ -134,15 +108,16 @@ const Header = (props) => {
                 </a>
               </Link>
             </Typography>
-            <Typography variant="h5" color="inherit">
+            <Typography
+              variant="h5"
+              color="inherit"
+              className={router.pathname == "/contactUs/contactUs" ? "active" : ""}
+            >
               <Link href="/contactUs/contactUs">
                 <a
-                  onClick={(e) => {
-                    wasClicked(e);
-                  }}
                   style={{
                     textDecoration: "none",
-                    color: clicked === 5 ? "red" : "black",
+                    color: router.pathname === "/contactUs/contactUs" ? "red" : "black",
                     opacity: ".70",
                   }}
                 >
