@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography } from "@material-ui/core";
 import Card from "@mui/material/Card";
-import Avatar from '@mui/material/Avatar';
+import Avatar from "@mui/material/Avatar";
 
 type TestimonialsProps = {};
 
@@ -79,8 +79,12 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         </Typography>
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
-            <Grid item xs={2} >
-            <Avatar alt="winhelm" src="/images/testimonials/winhelm.jpg"  sx={{ width: 110, height: 110}} />
+            <Grid item xs={2}>
+              <Avatar
+                alt="winhelm"
+                src="/images/testimonials/winhelm.jpg"
+                sx={{ width: 110, height: 110 }}
+              />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
@@ -111,7 +115,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
             <Grid item xs={2}>
-            <Avatar alt="winhelm" src="/images/testimonials/cleef.jpg"  sx={{ width: 110, height: 110}} />
+              <Avatar
+                alt="winhelm"
+                src="/images/testimonials/cleef.jpg"
+                sx={{ width: 110, height: 110 }}
+              />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
@@ -125,6 +133,17 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
               </Typography>
             </Grid>
           </Grid>
+        </Card>
+        <Card className={classes.card}>
+          <Typography style={{ paddingBottom: "2%" }}>
+            "I could not be happier with the way this business operates. They
+            are prompt with responses. Easy to get in contact with and you can
+            tell they take pride in the quality of services they provide. I
+            would highly recommend these painters to anyone who is looking."
+          </Typography>
+          <Typography style={{ fontWeight: 600 }}>
+            Jeremy Saunders
+          </Typography>
         </Card>
         <Card className={classes.card}>
           <Typography style={{ paddingBottom: "2%" }}>
@@ -144,7 +163,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         <Card className={classes.card}>
           <Grid container item xs={12} spacing={2}>
             <Grid item xs={2}>
-            <Avatar alt="winhelm" src="/images/testimonials/moses.jpg"  sx={{ width: 110, height: 110}} />
+              <Avatar
+                alt="winhelm"
+                src="/images/testimonials/moses.jpg"
+                sx={{ width: 110, height: 110 }}
+              />
             </Grid>
             <Grid item xs={10}>
               <Typography style={{ paddingBottom: "2%" }}>
@@ -159,7 +182,31 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                 do additional work for us and highly recommend their service to
                 anyone in the market for great work at a reasonable price.“
               </Typography>
-            <Typography style={{ fontWeight: 600 }}>Laurence Moses</Typography>
+              <Typography style={{ fontWeight: 600 }}>
+                Laurence Moses
+              </Typography>
+            </Grid>
+          </Grid>
+        </Card>
+        <Card className={classes.card}>
+          <Grid container item xs={12} spacing={2}>
+            <Grid item xs={2}>
+              <Avatar
+                alt="winhelm"
+                src="/images/testimonials/Barn.png"
+                sx={{ width: 110, height: 110 }}
+              />
+            </Grid>
+            <Grid item xs={10}>
+              <Typography style={{ paddingBottom: "2%" }}>
+                “Large Barn exterior paint with old paneling in bad shape was no
+                challenge at all to this great crew of painters. On time, super
+                clean and good communication made this easily a 5 out of 5 star
+                experience.“
+              </Typography>
+              <Typography style={{ fontWeight: 600 }}>
+               Lance Kinney
+              </Typography>
             </Grid>
           </Grid>
         </Card>

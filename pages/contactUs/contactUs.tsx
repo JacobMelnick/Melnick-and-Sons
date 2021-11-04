@@ -18,8 +18,8 @@ const useStyles = makeStyles(
       backgroundRepeat: "no-Repeat",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      width: "75%",
-      height: "50vh",
+      width: "80%",
+      height: "60vh",
     },
   }),
   { name: "MuiExample_Component" }
