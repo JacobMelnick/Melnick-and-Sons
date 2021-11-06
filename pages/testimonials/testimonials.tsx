@@ -59,6 +59,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         spacing={3}
         alignItems="stretch"
         justifyContent="center"
+        direction='column'
       >
         <Grid item xs={12}>
           <Typography
@@ -84,6 +85,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                   alt="winhelm"
                   src="/images/testimonials/winhelm.jpg"
                   sx={{ width: 110, height: 110 }}
+
                 />
               </Grid>
               <Grid item xs={10}>
