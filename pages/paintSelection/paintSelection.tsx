@@ -6,7 +6,7 @@ const useStyles = makeStyles(
   (theme) => ({
     root: {
       position: "relative",
-      height: "100%",
+      // height: "100%",
     },
     background: {
       position: "absolute",
@@ -32,7 +32,7 @@ const useStyles = makeStyles(
       backgroundColor: "white",
       justifyContent: "center",
       alignItems: "center",
-      width: "40%",
+      width: "80%",
       height: "88%",
       position: "absolute",
       display: "flex",

@@ -2,6 +2,8 @@ import { CssBaseline } from '@material-ui/core';
 import React from 'react';
 import Header from './Header/Header';
 import Head from "next/head";
+import Footer from './Footer/Footer';
+
 const Layout = ({ children }) => (
   <div style={{marginTop: "2%", overflow: 'hidden'}}>
      <Head>
@@ -13,7 +15,7 @@ const Layout = ({ children }) => (
     <CssBaseline/>
 
     {children}
-    {/* Footer */}
+    <Footer/>
   </div>
 );
 

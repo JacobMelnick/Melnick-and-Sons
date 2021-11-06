@@ -30,7 +30,6 @@ const useStyles = makeStyles(
       paddingBottom: 242,
     },
     firstHouse: {
-      // position: "absolute",
       backgroundImage: 'url("/images/logos/MainPageHouse1.jpg")',
       backgroundRepeat: "no-Repeat",
       backgroundSize: "cover",
@@ -64,9 +63,22 @@ const useStyles = makeStyles(
       minHeight: "60px",
       fontSize: 18,
       fontWeight: 240,
+      '& .paintButton' : {
+        overflow: 'hidden',
+        width: 0,
+        color: "#fff",
+        transition: 'all .5s',
+        marginLeft: 10
+      },
       "&:hover": {
         border: 0,
+        "& .paintButton": {
+          display: 'initial',
+          color: '#2ea3f2',
+          width: 'initial'
+        }
       },
+
     },
     contact: {
       border: "3px solid #2ea3f2",
@@ -76,8 +88,20 @@ const useStyles = makeStyles(
       minHeight: "60px",
       fontSize: 18,
       fontWeight: 240,
+      '& .contactButton' : {
+        overflow: 'hidden',
+        width: 0,
+        color: "#fff",
+        transition: 'all .5s',
+        marginLeft: 10
+      },
       "&:hover": {
         border: 0,
+        "& .contactButton": {
+          display: 'initial',
+          color: '#2ea3f2',
+          width: 'initial'
+        }
       },
     },
     sherwin: {
@@ -306,7 +330,7 @@ export default function Home(props) {
             <Link href="/paintSelection/paintSelection">
               <Button className={classes.paintButton}>
                 Color Finder
-                <ArrowForwardIosIcon></ArrowForwardIosIcon>
+                <ArrowForwardIosIcon className={'paintButton'}></ArrowForwardIosIcon>
               </Button>
             </Link>
           </Grid>
@@ -345,7 +369,7 @@ export default function Home(props) {
             <Link href="/contactUs/contactUs">
               <Button size="large" className={classes.contact}>
                 Contact Us
-                <ArrowForwardIosIcon></ArrowForwardIosIcon>
+                <ArrowForwardIosIcon className='contactButton'></ArrowForwardIosIcon>
               </Button>
             </Link>
           </Grid>
