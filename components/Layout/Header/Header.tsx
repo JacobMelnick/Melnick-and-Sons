@@ -39,7 +39,6 @@ const Header = () => {
           />
         </Grid>
         <Grid item xs={12}>
-        
           <Stack direction="row" spacing={5}>
             <Typography
               variant="h5"
@@ -51,6 +50,7 @@ const Header = () => {
                     textDecoration: "none",
                     color: router.pathname === "/" ? "red" : "black",
                     opacity: ".70",
+                    fontFamily: "Open Sans",
                   }}
                 >
                   Home
@@ -60,14 +60,22 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={router.pathname == "/paintSelection/paintSelection" ? "active" : ""}
+              className={
+                router.pathname == "/paintSelection/paintSelection"
+                  ? "active"
+                  : ""
+              }
             >
               <Link href="/paintSelection/paintSelection">
                 <a
                   style={{
                     textDecoration: "none",
-                    color: router.pathname === "/paintSelection/paintSelection" ? "red" : "black",
+                    color:
+                      router.pathname === "/paintSelection/paintSelection"
+                        ? "red"
+                        : "black",
                     opacity: ".70",
+                    fontFamily: "Open Sans",
                   }}
                 >
                   Paint Selection
@@ -77,14 +85,20 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={router.pathname == "/portfolio/portfolio" ? "active" : ""}
+              className={
+                router.pathname == "/portfolio/portfolio" ? "active" : ""
+              }
             >
               <Link href="/portfolio/portfolio">
                 <a
                   style={{
                     textDecoration: "none",
-                    color: router.pathname === "/portfolio/portfolio" ? "red" : "black",
+                    color:
+                      router.pathname === "/portfolio/portfolio"
+                        ? "red"
+                        : "black",
                     opacity: ".70",
+                    fontFamily: "Open Sans",
                   }}
                 >
                   Portfolio
@@ -94,14 +108,20 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={router.pathname == "/testimonials/testimonials" ? "active" : ""}
+              className={
+                router.pathname == "/testimonials/testimonials" ? "active" : ""
+              }
             >
               <Link href="/testimonials/testimonials">
                 <a
                   style={{
                     textDecoration: "none",
-                    color: router.pathname === "/testimonials/testimonials" ? "red" : "black",
+                    color:
+                      router.pathname === "/testimonials/testimonials"
+                        ? "red"
+                        : "black",
                     opacity: ".70",
+                    fontFamily: "Open Sans",
                   }}
                 >
                   Testimonials
@@ -111,14 +131,20 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={router.pathname == "/contactUs/contactUs" ? "active" : ""}
+              className={
+                router.pathname == "/contactUs/contactUs" ? "active" : ""
+              }
             >
               <Link href="/contactUs/contactUs">
                 <a
                   style={{
                     textDecoration: "none",
-                    color: router.pathname === "/contactUs/contactUs" ? "red" : "black",
+                    color:
+                      router.pathname === "/contactUs/contactUs"
+                        ? "red"
+                        : "black",
                     opacity: ".70",
+                    fontFamily: "Open Sans",
                   }}
                 >
                   Contact Us
