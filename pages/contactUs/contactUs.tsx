@@ -9,9 +9,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 const useStyles = makeStyles(
   (theme) => ({
     root: {
-      // position: "relative",
-      height: "100%",
       paddingTop: "5%",
+      paddingBottom: '10%'
     },
     trucks: {
       backgroundImage: 'url("/images/logos/TrucksHome.jpg")',
@@ -19,7 +18,6 @@ const useStyles = makeStyles(
       backgroundSize: "cover",
       backgroundPosition: "center",
       width: "80%",
-      height: "60vh",
     },
   }),
   { name: "MuiExample_Component" }
@@ -32,18 +30,16 @@ const contactUs: React.FC<contactUsProps> = (props) => {
 
   return (
     <Layout>
-      <Grid className={classes.root} container spacing={2}>
-        <Grid container item xs={6} direction="column">
+      <Grid className={classes.root} container >
+        <Grid container item xs={6} direction="column" >
           <Grid
-            item
-            xs={6}
             container
             direction="row"
             spacing={2}
             alignItems="center"
             justifyContent="center"
           >
-            <Grid item xs={12}>
+            <Grid item xs={12} >
               <Typography variant="h2" style={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Montserrat', fontSize: 48, letterSpacing: 3, lineHeight: '1.3em' }}>
                 CONTACT US
               </Typography>

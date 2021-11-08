@@ -19,21 +19,20 @@ const useStyles = makeStyles(
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      overflow: 'auto'
+      overflow: "auto",
     },
     rootImage: {
       position: "relative",
       width: "100vw",
       height: 1100,
       paddingTop: "1%",
-      
     },
     white: {
       backgroundColor: "white",
       width: "80%",
       position: "absolute",
-      overflow: 'auto',
-      top: '8%'
+      overflow: "auto",
+      top: "8%",
     },
     smallIcon: {
       backgroundImage: 'url("/images/logos/Sherwin.png")',
@@ -74,7 +73,12 @@ const paintSelection = (props) => {
                 >
                   <Typography
                     variant="h4"
-                    style={{ textAlign: "center", fontWeight: 350, paddingTop: '5%', fontFamily: 'OpenSans' }}
+                    style={{
+                      textAlign: "center",
+                      fontWeight: 350,
+                      paddingTop: "5%",
+                      fontFamily: "OpenSans",
+                    }}
                   >
                     Choosing A Paint
                   </Typography>
@@ -87,7 +91,7 @@ const paintSelection = (props) => {
                       fontWeight: 200,
                       fontSize: 29,
                       paddingBottom: "3%",
-                      fontFamily: 'OpenSans'
+                      fontFamily: "OpenSans",
                     }}
                   >
                     As painters, we make it our mission to select the best
