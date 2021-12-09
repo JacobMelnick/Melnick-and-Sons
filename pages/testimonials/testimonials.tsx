@@ -17,8 +17,6 @@ const useStyles = makeStyles(
       padding: "30px",
       backgroundColor: "#515151",
       color: "#fff",
-      width: '80%',
-      
     },
 
     winhelm: {
@@ -58,11 +56,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         className={classes.root}
         container
         spacing={3}
-        alignItems="stretch"
+        alignItems="center"
         justifyContent="center"
         direction="column"
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} >
           <Typography
             variant="h1"
             style={{
@@ -71,14 +69,13 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
               color: "#333",
               lineHeight: "1em",
               letterSpacing: 2,
-              textAlign: "center",
-              marginBottom: 10
+              marginBottom: 10,
             }}
           >
             Our Testimonials:
           </Typography>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={1}>
               <Grid item xs={2}>
@@ -89,20 +86,26 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                 />
               </Grid>
               <Grid item xs={10}>
-                <Typography style={{ paddingBottom: "1%", fontSize: 15, fontWeight: 300 }}>
+                <Typography
+                  style={{ paddingBottom: "1%", fontSize: 15, fontWeight: 300 }}
+                >
                   “We told the manager at Sherwin Williams in Oak Harbor that we
                   wanted to hire a top-quality painting contractor. He
                   recommended several including Todd Melnick who called us back
                   very quickly.
                 </Typography>
-                <Typography style={{ paddingBottom: "1%", fontSize: 15, fontWeight: 300  }}>
+                <Typography
+                  style={{ paddingBottom: "1%", fontSize: 15, fontWeight: 300 }}
+                >
                   The job was to prepare and paint the exterior of our home, a
                   guest house, and a detached garage plus several landscape
                   features. To make sure Todd’s idea of quality workmanship was
                   the same as ours we initially hired his company to refinish
                   only the garage.
                 </Typography>
-                <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+                <Typography
+                  style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+                >
                   Todd Melnick easily passed our test. The quality of his work
                   was OUTSTANDING! Todd and his crew went on to complete the
                   entire project with the same fine work ethic and attention to
@@ -116,7 +119,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={2}>
               <Grid item xs={2}>
@@ -127,7 +130,9 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                 />
               </Grid>
               <Grid item xs={10}>
-                <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+                <Typography
+                  style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+                >
                   “Todd and his crew are professional, polite and efficient, I
                   can always count on Melnick & Sons to use the finest materials
                   to produce great results. We are happy to recommend them for a
@@ -141,9 +146,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
           </Card>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
-            <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+            <Typography
+              style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+            >
               "I could not be happier with the way this business operates. They
               are prompt with responses. Easy to get in contact with and you can
               tell they take pride in the quality of services they provide. I
@@ -152,9 +159,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             <Typography style={{ fontWeight: 600 }}>Jeremy Saunders</Typography>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
-            <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+            <Typography
+              style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+            >
               “My wife and I had the good fortune to hire Todd Melnick and his
               fantastic crew to paint the complete interior of our Whidbey
               Island home. Todd’s team was incredibly professional with
@@ -169,7 +178,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Typography>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={2}>
               <Grid item xs={2}>
@@ -180,7 +189,9 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                 />
               </Grid>
               <Grid item xs={10}>
-                <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+                <Typography
+                  style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+                >
                   “Melnick & Sons recently painted the majority of the interior
                   of our home, while we were in residence, so they had to
                   contend with furniture and other belongings which needed to be
@@ -200,7 +211,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={2}>
               <Grid item xs={2}>
@@ -211,7 +222,9 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
                 />
               </Grid>
               <Grid item xs={10}>
-                <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+                <Typography
+                  style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+                >
                   “Large Barn exterior paint with old paneling in bad shape was
                   no challenge at all to this great crew of painters. On time,
                   super clean and good communication made this easily a 5 out of
@@ -224,9 +237,11 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
-            <Typography style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300  }}>
+            <Typography
+              style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
+            >
               “I contacted three local painting contractors to get bids on
               painting the exterior of our home. Melnick and Sons was the
               company I chose based on Todd’s professional and personal
