@@ -24,7 +24,6 @@ const useStyles = makeStyles(
       position: "relative",
       width: "100vw",
       height: 700,
-      paddingTop: "1%",
     },
 
     firstImage: {

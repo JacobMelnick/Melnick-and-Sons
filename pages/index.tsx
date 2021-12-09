@@ -16,7 +16,6 @@ const useStyles = makeStyles(
       position: "relative",
       width: "100vw",
       height: 600,
-      paddingTop: "1%",
     },
     photo: {
       position: "absolute",

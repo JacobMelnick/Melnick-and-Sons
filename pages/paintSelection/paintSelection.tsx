@@ -25,7 +25,6 @@ const useStyles = makeStyles(
       position: "relative",
       width: "100vw",
       height: 1100,
-      paddingTop: "1%",
     },
     white: {
       backgroundColor: "white",

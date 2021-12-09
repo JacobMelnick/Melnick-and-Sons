@@ -5,7 +5,7 @@ import Head from "next/head";
 import Footer from './Footer/Footer';
 
 const Layout = ({ children }) => (
-  <div style={{marginTop: "2%", overflow: 'hidden'}}>
+  <div style={{overflow: 'hidden'}}>
      <Head>
         <title>Melnick & Son's | Painting just got a whole lot easier</title>
       </Head>
