@@ -15,6 +15,7 @@ const Root = styled("div")((theme) => ({
   [`&.${classes.root}`]: {
     width: "100vw",
     background: "#fff",
+    height: '30vh'
   },
 }));
 
@@ -25,10 +26,16 @@ const Header = () => {
     <Root className={classes.root}>
       <Grid
         container
-        spacing={2}
+        spacing={1}
         direction="column"
         alignItems="center"
         justifyContent="space-around"
+        style={{
+          top: 0,
+          position: "fixed",
+          background: "white",
+          zIndex: 1,
+        }}
       >
         <Grid item xs={12}>
           <Image
