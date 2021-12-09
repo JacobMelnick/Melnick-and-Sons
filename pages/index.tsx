@@ -107,9 +107,9 @@ const useStyles = makeStyles(
     sherwin: {
       backgroundImage: 'url("/images/logos/Sherwin.png")',
       backgroundRepeat: "no-Repeat",
-      backgroundSize: "10%",
+      backgroundSize: "13%",
       backgroundPosition: "center",
-      height: 400,
+      height: 300,
     },
     truckHome: {
       backgroundImage: 'url("/images/logos/TrucksHome.jpg")',
@@ -146,13 +146,13 @@ export default function Home(props) {
           </div>
         </div>
         <Grid item xs={12} style={{ paddingTop: "5%" }}>
-          <Stack direction="column" spacing={4} alignItems="center">
+          <Stack direction="column" spacing={1} alignItems="center">
             <Typography variant="h2" style={{ fontWeight: 530 }}>
               What We Do
             </Typography>
             <Typography
               variant="h5"
-              style={{ width: "28%", textAlign: "center", fontWeight: 300 }}
+              style={{ width: "40%", textAlign: "center", fontWeight: 300, fontSize: 18, lineHeight: '1.8em' }}
             >
               At Melnick & Son’s, we believe in superior craftsmanship and
               customer satisfaction above all else. We are a licensed, bonded
@@ -261,10 +261,10 @@ export default function Home(props) {
                 variant="h4"
                 style={{
                   fontWeight: 700,
-                  textAlign: "center",
                   color: "white",
-                  marginRight: "54%",
                   height: "20%",
+                  marginLeft: '10%'
+
                 }}
               >
                 List of Services
@@ -275,7 +275,7 @@ export default function Home(props) {
                   fontWeight: 500,
                   color: "white",
                   width: "75%",
-                  marginLeft: "15%",
+                  marginLeft: '10%'
                 }}
               >
                 Color Consulting, Custom Painting Finish, Deck Staining &
@@ -304,7 +304,7 @@ export default function Home(props) {
               style={{
                 fontWeight: 800,
                 textAlign: "center",
-                paddingBottom: "1%",
+                // paddingBottom: "1%",
               }}
             >
               Partners
@@ -349,7 +349,7 @@ export default function Home(props) {
               About Us
             </Typography>
           </Grid>
-          <Grid item xs={5} md={6} lg={5}>
+          <Grid item xs={5} md={12} lg={10}>
             <Typography
               variant="h6"
               style={{ textAlign: "center", fontWeight: 300 }}
