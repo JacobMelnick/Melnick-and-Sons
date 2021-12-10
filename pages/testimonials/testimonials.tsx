@@ -11,7 +11,7 @@ const useStyles = makeStyles(
   (theme) => ({
     root: {
       minHeight: "100vh",
-      padding: "2%",
+      padding: "5%",
     },
     card: {
       padding: "30px",
@@ -60,7 +60,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
         justifyContent="center"
         direction="column"
       >
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <Typography
             variant="h1"
             style={{
