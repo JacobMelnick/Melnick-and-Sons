@@ -15,7 +15,6 @@ const Root = styled("div")((theme) => ({
   [`&.${classes.root}`]: {
     width: "100vw",
     background: "#fff",
-    height: '30vh'
   },
 }));
 
@@ -32,9 +31,9 @@ const Header = () => {
         justifyContent="space-around"
         style={{
           top: 0,
-          position: "fixed",
+          // position: "fixed",
           background: "white",
-          zIndex: 1,
+          // zIndex: 1,
           boxShadow: '0 1px 0 rgb(0 0 0 / 10%)'
         }}
       >

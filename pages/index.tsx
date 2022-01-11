@@ -106,9 +106,10 @@ const useStyles = makeStyles(
     sherwin: {
       backgroundImage: 'url("/images/logos/Sherwin.png")',
       backgroundRepeat: "no-Repeat",
-      backgroundSize: "13%",
+      backgroundSize: "contain",
       backgroundPosition: "center",
       height: 300,
+      maxWidth: '100%'
     },
     truckHome: {
       backgroundImage: 'url("/images/logos/TrucksHome.jpg")',
