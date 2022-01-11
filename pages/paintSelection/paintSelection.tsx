@@ -24,7 +24,7 @@ const useStyles = makeStyles(
     rootImage: {
       position: "relative",
       width: "100vw",
-      height: 1100,
+      height: 1150,
     },
     white: {
       backgroundColor: "white",
@@ -36,16 +36,16 @@ const useStyles = makeStyles(
     smallIcon: {
       backgroundImage: 'url("/images/logos/Sherwin.png")',
       backgroundRepeat: "no-Repeat",
-      backgroundSize: "15%",
+      backgroundSize: "contain",
       backgroundPosition: "center",
       height: 200,
     },
     behr: {
       backgroundImage: 'url("/images/paintSelection/behr.jpg")',
       backgroundRepeat: "no-Repeat",
-      backgroundSize: "33%",
+      backgroundSize: "contain",
       backgroundPosition: "center",
-      height: 200,
+      height: 180,
     },
   }),
   { name: "MuiExample_Component" }
@@ -131,7 +131,7 @@ const paintSelection = (props) => {
                   xs={12}
                   justifyContent="center"
                   alignItems="center"
-                  style={{ paddingTop: "8%" }}
+                  style={{ paddingTop: "8%", paddingBottom: '4%' }}
                 >
                   <Typography
                     variant="h5"

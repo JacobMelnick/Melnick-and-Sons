@@ -11,7 +11,7 @@ const useStyles = makeStyles(
   (theme) => ({
     root: {
       minHeight: "100vh",
-      padding: "5%",
+      padding: "3%",
     },
     card: {
       padding: "30px",
@@ -119,9 +119,9 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
-            <Grid container item xs={12} spacing={2}>
+            <Grid container item xs={12} spacing={1}>
               <Grid item xs={2}>
                 <Avatar
                   alt="winhelm"
@@ -146,7 +146,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
           </Card>
         </Grid>
 
-        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Typography
               style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
@@ -159,7 +159,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             <Typography style={{ fontWeight: 600 }}>Jeremy Saunders</Typography>
           </Card>
         </Grid>
-        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Typography
               style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}
@@ -178,7 +178,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Typography>
           </Card>
         </Grid>
-        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={2}>
               <Grid item xs={2}>
@@ -211,7 +211,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12} style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Grid container item xs={12} spacing={2}>
               <Grid item xs={2}>
@@ -237,7 +237,7 @@ const Testimonials: React.FC<TestimonialsProps> = (props) => {
             </Grid>
           </Card>
         </Grid>
-        <Grid item xs={8} md={6} style={{ maxWidth: "75%" }}>
+        <Grid item xs={12}  style={{ maxWidth: "75%" }}>
           <Card className={classes.card}>
             <Typography
               style={{ paddingBottom: "2%", fontSize: 15, fontWeight: 300 }}

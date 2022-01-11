@@ -34,7 +34,7 @@ const Header = () => {
           // position: "fixed",
           background: "white",
           // zIndex: 1,
-          boxShadow: '0 1px 0 rgb(0 0 0 / 10%)'
+          boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
         }}
       >
         <Grid item xs={12}>
@@ -45,7 +45,7 @@ const Header = () => {
             alt="Melnick and Sons"
           />
         </Grid>
-        <Grid item xs={12} style={{paddingBottom: '1%'}}>
+        <Grid item xs={12} style={{ paddingBottom: "1%" }}>
           <Stack direction="row" spacing={5}>
             <Typography
               variant="h5"
