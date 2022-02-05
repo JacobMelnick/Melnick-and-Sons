@@ -145,8 +145,8 @@ export default function Home(props) {
             </div>
           </div>
         </div>
-        <Grid item xs={12} style={{ paddingTop: "5%" }}>
-          <Stack direction="column" spacing={1} alignItems="center">
+        <Grid item xs={12} md={8} lg={12} style={{ paddingTop: "5%" }}>
+          <Stack direction="column" spacing={3} alignItems="center">
             <Typography variant="h2" style={{ fontWeight: 530 }}>
               What We Do
             </Typography>
@@ -249,7 +249,7 @@ export default function Home(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container item xs={12} style={{ paddingBottom: "4%" }}>
+        <Grid container item xs={12}  style={{ paddingBottom: "4%" }}>
           <Stack direction="row">
             <div className={classes.firstHouse}></div>
             <Stack
@@ -327,7 +327,7 @@ export default function Home(props) {
             xs={12}
             style={{ textAlign: "center", paddingBottom: "4%" }}
           >
-            <Link href="/paintSelection/paintSelection">
+            <Link href="paint-selection">
               <Button className={classes.paintButton}>
                 Color Finder
                 <ArrowForwardIosIcon className={'paintButton'}></ArrowForwardIosIcon>
@@ -349,7 +349,7 @@ export default function Home(props) {
               About Us
             </Typography>
           </Grid>
-          <Grid item xs={5} md={12} lg={10}>
+          <Grid item xs={12} md={12} lg={10}>
             <Typography
               variant="h6"
               style={{ textAlign: "center", fontWeight: 300 }}
@@ -366,7 +366,7 @@ export default function Home(props) {
             xs={12}
             style={{ textAlign: "center", paddingBottom: "5%" }}
           >
-            <Link href="/contactUs/contactUs">
+            <Link href="/contact-us">
               <Button size="large" className={classes.contact}>
                 Contact Us
                 <ArrowForwardIosIcon className='contactButton'></ArrowForwardIosIcon>

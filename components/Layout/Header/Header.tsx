@@ -28,13 +28,12 @@ const Header = () => {
         spacing={1}
         direction="column"
         alignItems="center"
-        justifyContent="space-around"
         style={{
           top: 0,
-          // position: "fixed",
+          position: "fixed",
           background: "white",
-          // zIndex: 1,
-          boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
+          zIndex: 1,
+          // boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
         }}
       >
         <Grid item xs={12}>
@@ -45,7 +44,7 @@ const Header = () => {
             alt="Melnick and Sons"
           />
         </Grid>
-        <Grid item xs={12} style={{ paddingBottom: "1%" }}>
+        <Grid item>
           <Stack direction="row" spacing={5}>
             <Typography
               variant="h5"
@@ -67,20 +66,14 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={
-                router.pathname == "/paintSelection/paintSelection"
-                  ? "active"
-                  : ""
-              }
+              className={router.pathname == "/paint-selection" ? "active" : ""}
             >
-              <Link href="/paintSelection/paintSelection">
+              <Link href="/paint-selection">
                 <a
                   style={{
                     textDecoration: "none",
                     color:
-                      router.pathname === "/paintSelection/paintSelection"
-                        ? "red"
-                        : "black",
+                      router.pathname === "/paint-selection" ? "red" : "black",
                     opacity: ".70",
                     fontFamily: "Open Sans",
                   }}
@@ -92,18 +85,13 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={
-                router.pathname == "/portfolio/portfolio" ? "active" : ""
-              }
+              className={router.pathname == "/portfolio" ? "active" : ""}
             >
-              <Link href="/portfolio/portfolio">
+              <Link href="/portfolio">
                 <a
                   style={{
                     textDecoration: "none",
-                    color:
-                      router.pathname === "/portfolio/portfolio"
-                        ? "red"
-                        : "black",
+                    color: router.pathname === "/portfolio" ? "red" : "black",
                     opacity: ".70",
                     fontFamily: "Open Sans",
                   }}
@@ -138,18 +126,13 @@ const Header = () => {
             <Typography
               variant="h5"
               color="inherit"
-              className={
-                router.pathname == "/contactUs/contactUs" ? "active" : ""
-              }
+              className={router.pathname == "/contact-us" ? "active" : ""}
             >
-              <Link href="/contactUs/contactUs">
+              <Link href="/contact-us">
                 <a
                   style={{
                     textDecoration: "none",
-                    color:
-                      router.pathname === "/contactUs/contactUs"
-                        ? "red"
-                        : "black",
+                    color: router.pathname === "/contact-us" ? "red" : "black",
                     opacity: ".70",
                     fontFamily: "Open Sans",
                   }}
