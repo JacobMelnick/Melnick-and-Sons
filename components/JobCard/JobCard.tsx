@@ -14,6 +14,7 @@ const useStyles = makeStyles(
       paddingLeft: 13,
       paddingRight: 13,
       paddingTop: 13,
+      paddingBottom: 13,
     },
     hyperLink: {
       textDecoration: "none",
@@ -23,6 +24,14 @@ const useStyles = makeStyles(
         color: "#ace5ee",
         cursor: "pointer",
       },
+    },
+    FeatureCard: {
+      width: "80%",
+      margin: "2%",
+      height: 300,
+      paddingLeft: 13,
+      paddingRight: 13,
+      paddingTop: 13,
     },
   }),
   { name: "MuiExample_Component" }
@@ -48,7 +57,7 @@ const JobCard: React.FC<JobCardProps> = ({
   return (
     <div className={classes.root}>
       {featured && (
-        <Card className={classes.card}>
+        <Card className={classes.FeatureCard}>
           <Grid container spacing={1}>
             <Grid item xs={12}>
               <CardMedia component="img" height="150" image={image} />
@@ -79,10 +88,10 @@ const JobCard: React.FC<JobCardProps> = ({
               <CardMedia component="img" height="194" image={image} />
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"}>{name}</Typography>
+              <Typography variant={"h6"} style={{paddingLeft: 5}}>{name}</Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"}>
+              <Typography variant={"h6"} style={{paddingLeft: 5}}>
                 <a className={classes.hyperLink}>Click To See Details</a>
               </Typography>
             </Grid>

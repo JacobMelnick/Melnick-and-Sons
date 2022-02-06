@@ -39,7 +39,6 @@ const useStyles = makeStyles(
       backgroundPosition: "center",
       width: "15%",
     },
-   
   }),
   { name: "MuiExample_Component" }
 );
@@ -71,7 +70,6 @@ export async function getStaticProps() {
 const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
   const classes = useStyles();
   const featuredJobs = jobs.filter((job) => job.Featured);
-  
 
   const restJobs = jobs.filter((job) => !job.Featured);
 
@@ -113,14 +111,35 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
           </div>
         </div>
 
-        <Grid item xs={4} md={9} lg={12} textAlign="center" justifyContent="center">
-          <Typography style={{ fontSize: 24, paddingBottom: "2%" }}>
+        <Grid
+          item
+          xs={12}
+          md={9}
+          lg={12}
+          textAlign="center"
+          justifyContent="center"
+        >
+          <Typography style={{ fontSize: 24, paddingBottom: "2%", fontWeight: 300 }}>
             Residential or commercial, big or small, Melnick & Son’s has you
             covered and our portfolio of work has grown to the point where it
             speaks for itself.
           </Typography>
         </Grid>
-        <Grid container spacing={4} item xs={12} md={12} lg={12} >
+
+        <Grid
+          item
+          xs={12}
+          md={9}
+          lg={12}
+          textAlign="center"
+          justifyContent="center"
+        >
+          <Typography style={{ fontSize: 28, paddingBottom: "2%", textDecoration: 'underLine' }}>
+            All Our Jobs
+          </Typography>
+        </Grid>
+
+        <Grid container spacing={4} item xs={12} md={12} lg={12}>
           {restJobs.map((job: any) => (
             <Grid container item xs={12} md={6} lg={4} key={job._id}>
               <JobCard
