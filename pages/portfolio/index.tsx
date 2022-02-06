@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import MelnickPhoto from "./MainHouses/MelnickHome/MelnickPhoto";
 import WilhelmPhoto from "./MainHouses/Wilhelm/WilhelmPhoto";
 import CoupevillePhoto from "./MainHouses/Coupeville/CoupevillePhoto";
-import { SanityClient } from '../../services/SanityClient';
+import { SanityClient } from "../../services/SanityClient";
 import JobCard from "../../components/JobCard/JobCard";
 import { log } from "console";
 const useStyles = makeStyles(
@@ -39,10 +39,7 @@ const useStyles = makeStyles(
       backgroundPosition: "center",
       width: "15%",
     },
-    card: {
-      width: "80%",
-      height: 300,
-    },
+   
   }),
   { name: "MuiExample_Component" }
 );
@@ -50,20 +47,20 @@ type portfolioProps = {
   jobs: Job;
 };
 
-
-
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
 
-  const jobs = await SanityClient.fetch( `*[_type == 'Job']{
+  const jobs = await SanityClient.fetch(`*[_type == 'Job']{
     _id,
     JobName,
     slug,
+    Featured,
+    Description,
     images[]{
       asset->
     }
-  }`,);
-  
+  }`);
+
   return {
     props: {
       jobs: jobs,
@@ -71,12 +68,13 @@ export async function getStaticProps() {
   };
 }
 
-const portfolio: React.FC<portfolioProps> = ({jobs}) => {
+const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
   const classes = useStyles();
-  const featuredJobs = jobs.filter((job) => job.featured);
-  const restJobs = jobs.filter((job) => !job.featured);
-  console.log(restJobs)
+  const featuredJobs = jobs.filter((job) => job.Featured);
   
+
+  const restJobs = jobs.filter((job) => !job.Featured);
+
   return (
     <Layout>
       <Grid className={classes.root}>
@@ -97,53 +95,48 @@ const portfolio: React.FC<portfolioProps> = ({jobs}) => {
                 </Grid>
               </Grid>
 
-              <Grid container item xs={4}>
-                <MelnickPhoto></MelnickPhoto>
-              </Grid>
-
-              <Grid container item xs={4}>
-                <WilhelmPhoto></WilhelmPhoto>
-              </Grid>
-
-              <Grid container item xs={4}>
-              <CoupevillePhoto></CoupevillePhoto>
+              <Grid container spacing={4} item xs={12} md={9} margin="40px">
+                {featuredJobs.map((job: any) => (
+                  <Grid container item xs={12} md={6} lg={4} key={job._id}>
+                    <JobCard
+                      name={job.JobName}
+                      key={job._id}
+                      image={job.images[0].asset.url}
+                      slug={job.slug.current}
+                      featured={job.Featured}
+                      description={job.Description}
+                    />
+                  </Grid>
+                ))}
               </Grid>
             </Grid>
-
           </div>
         </div>
 
-        <Grid item xs={12} textAlign="center" justifyContent="center">
-          <Typography style={{ fontSize: 24, paddingBottom: "2%"}}>
+        <Grid item xs={4} md={9} lg={12} textAlign="center" justifyContent="center">
+          <Typography style={{ fontSize: 24, paddingBottom: "2%" }}>
             Residential or commercial, big or small, Melnick & Son’s has you
             covered and our portfolio of work has grown to the point where it
             speaks for itself.
           </Typography>
         </Grid>
-        <Grid
-          container
-          spacing={4}
-          item
-          xs={12}
-          md={9}
-          margin="40px"
-        >
-             {restJobs.map((job: any) => (
-                <Grid container item xs={12} md={6} lg={4} key={job}>
-               <JobCard name={job.JobName}
-                    key={job._id}
-                  image={job.images[0].asset.url}
-                  slug={job.slug.current} />
-              </Grid>
-              ))}
+        <Grid container spacing={4} item xs={12} md={12} lg={12} >
+          {restJobs.map((job: any) => (
+            <Grid container item xs={12} md={6} lg={4} key={job._id}>
+              <JobCard
+                name={job.JobName}
+                key={job._id}
+                image={job.images[0].asset.url}
+                slug={job.slug.current}
+                featured={job.Featured}
+                description={job.Description}
+              />
+            </Grid>
+          ))}
         </Grid>
       </Grid>
     </Layout>
   );
 };
-
-
-
-
 
 export default portfolio;

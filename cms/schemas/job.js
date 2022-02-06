@@ -9,6 +9,11 @@ const jobSchema = {
         type: "string",
       },
       {
+        title: "Job Description",
+        name: "Description",
+        type: "text",
+      },
+      {
         title: "Images",
         name: "images",
         type: "array",
