@@ -1,13 +1,11 @@
 import Layout from "../../components/Layout/Layout";
 import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography } from "@material-ui/core";
-import Card from "@mui/material/Card";
-import MelnickPhoto from "./MainHouses/MelnickHome/MelnickPhoto";
-import WilhelmPhoto from "./MainHouses/Wilhelm/WilhelmPhoto";
-import CoupevillePhoto from "./MainHouses/Coupeville/CoupevillePhoto";
+import { useRouter } from 'next/router';
+
 import { SanityClient } from "../../services/SanityClient";
 import JobCard from "../../components/JobCard/JobCard";
-import { log } from "console";
+
 const useStyles = makeStyles(
   (theme) => ({
     root: {
@@ -43,11 +41,10 @@ const useStyles = makeStyles(
   { name: "MuiExample_Component" }
 );
 type portfolioProps = {
-  jobs: Job;
+  jobs: any;
 };
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
 
   const jobs = await SanityClient.fetch(`*[_type == 'Job']{
     _id,
@@ -70,8 +67,11 @@ export async function getStaticProps() {
 const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
   const classes = useStyles();
   const featuredJobs = jobs.filter((job) => job.Featured);
-
   const restJobs = jobs.filter((job) => !job.Featured);
+
+  const router = useRouter();
+  const queryParams = router.query;
+  
 
   return (
     <Layout>
@@ -119,7 +119,7 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
           textAlign="center"
           justifyContent="center"
         >
-          <Typography style={{ fontSize: 24, paddingBottom: "2%", fontWeight: 300 }}>
+          <Typography style={{ fontSize: 24, paddingBottom: "2%", fontWeight: 300, margin: 10 }}>
             Residential or commercial, big or small, Melnick & Son’s has you
             covered and our portfolio of work has grown to the point where it
             speaks for itself.

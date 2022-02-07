@@ -33,7 +33,7 @@ const Header = () => {
           position: "fixed",
           background: "white",
           zIndex: 1,
-          // boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
+          boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
         }}
       >
         <Grid item xs={12}>

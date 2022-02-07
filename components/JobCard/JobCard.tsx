@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/styles";
 import { Grid, Typography } from "@material-ui/core";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
+import { NextLinkComposed } from "../../components/Link/Link";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -74,9 +76,14 @@ const JobCard: React.FC<JobCardProps> = ({
               </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"}>
-                <a className={classes.hyperLink}>Click To See Details</a>
-              </Typography>
+              <Button
+                variant="text"
+                size="small"
+                component={NextLinkComposed}
+                to={`/portfolio/${slug}`}
+              >
+                Click To See Details
+              </Button>
             </Grid>
           </Grid>
         </Card>
@@ -88,12 +95,19 @@ const JobCard: React.FC<JobCardProps> = ({
               <CardMedia component="img" height="194" image={image} />
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"} style={{paddingLeft: 5}}>{name}</Typography>
+              <Typography variant={"h6"} style={{ paddingLeft: 5 }}>
+                {name}
+              </Typography>
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"} style={{paddingLeft: 5}}>
-                <a className={classes.hyperLink}>Click To See Details</a>
-              </Typography>
+              <Button
+                variant="text"
+                size="small"
+                component={NextLinkComposed}
+                to={`/portfolio/${slug}`}
+              >
+                Click To See Details
+              </Button>
             </Grid>
           </Grid>
         </Card>
