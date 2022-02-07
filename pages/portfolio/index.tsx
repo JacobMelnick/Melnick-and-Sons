@@ -29,14 +29,7 @@ const useStyles = makeStyles(
       height: 700,
     },
 
-    firstImage: {
-      position: "absolute",
-      backgroundImage: 'url("/images/melnickHouse/melnickHouse15.jpg")',
-      backgroundRepeat: "no-Repeat",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      width: "15%",
-    },
+    
   }),
   { name: "MuiExample_Component" }
 );
@@ -71,8 +64,7 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
 
   const router = useRouter();
   const queryParams = router.query;
-  
-
+ 
   return (
     <Layout>
       <Grid className={classes.root}>
