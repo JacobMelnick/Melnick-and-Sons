@@ -33,6 +33,7 @@ const Header = () => {
           position: "fixed",
           background: "white",
           zIndex: 1,
+          paddingBottom: "2%",
           boxShadow: "0 1px 0 rgb(0 0 0 / 10%)",
         }}
       >

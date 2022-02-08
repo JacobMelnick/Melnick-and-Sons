@@ -29,7 +29,7 @@ const JobImages = ({ image }) => {
   };
 
   return (
-    <Grid container spacing={4}  item xs={12} md={9} lg={8} marginLeft="13%" >
+    <Grid container spacing={6}  item xs={12} md={9} lg={8} marginLeft='12%'   >
       {image.map((image: any) => (
         <Grid
           item

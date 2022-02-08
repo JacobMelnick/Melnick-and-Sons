@@ -29,11 +29,11 @@ const useStyles = makeStyles(
     },
     FeatureCard: {
       width: "80%",
-      margin: "2%",
-      height: 300,
+      margin: "8%", 
       paddingLeft: 13,
       paddingRight: 13,
       paddingTop: 13,
+      paddingBottom: 13,
     },
   }),
   { name: "MuiExample_Component" }
@@ -60,17 +60,18 @@ const JobCard: React.FC<JobCardProps> = ({
     <div className={classes.root}>
       {featured && (
         <Card className={classes.FeatureCard}>
-          <Grid container spacing={1}>
+          <Grid container spacing={1} >
             <Grid item xs={12}>
               <CardMedia component="img" height="150" image={image} />
             </Grid>
             <Grid item xs={12}>
-              <Typography variant={"h6"}>{name}</Typography>
+              <Typography variant={"h6"} style={{ paddingLeft: 5 }}>{name}</Typography>
             </Grid>
             <Grid item xs={12}>
               <Typography
                 variant={"h6"}
-                style={{ fontSize: 12, fontWeight: 340 }}
+                
+                style={{ fontSize: 12, fontWeight: 340, paddingLeft: 5 }}
               >
                 {description}
               </Typography>

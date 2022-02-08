@@ -9,26 +9,14 @@ import JobCard from "../../components/JobCard/JobCard";
 const useStyles = makeStyles(
   (theme) => ({
     root: {
-      position: "relative",
     },
     background: {
-      position: "absolute",
       backgroundImage: 'url("/images/portfolio/portBack.jpg")',
       backgroundRepeat: "no-Repeat",
       backgroundSize: "cover",
       backgroundPosition: "center",
-      width: "100%",
-      height: "90%",
-      opacity: 1.5,
-      display: "flex",
+      height: "100%",
     },
-    rootImage: {
-      display: "flex",
-      position: "relative",
-      width: "100vw",
-      height: 700,
-    },
-
     
   }),
   { name: "MuiExample_Component" }
@@ -68,24 +56,22 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
   return (
     <Layout>
       <Grid className={classes.root}>
-        <div className={classes.rootImage}>
           <div className={classes.background}>
             <Grid
               container
               alignItems="center"
               justifyContent="center"
               spacing={1}
-              paddingLeft="10%"
             >
               <Grid container item xs={12}>
                 <Grid item xs={12}>
-                  <Typography variant="h4" style={{ color: "white" }}>
-                    Our Featured Jobs:
+                  <Typography variant="h4" style={{ color: "white", paddingLeft: '7%', paddingTop: '4%' }}>
+                    Our Featured Jobs
                   </Typography>
                 </Grid>
               </Grid>
 
-              <Grid container spacing={4} item xs={12} md={9} margin="40px">
+              <Grid container spacing={4} item xs={12} md={12} lg={12} margin="40px">
                 {featuredJobs.map((job: any) => (
                   <Grid container item xs={12} md={6} lg={4} key={job._id}>
                     <JobCard
@@ -101,7 +87,6 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
               </Grid>
             </Grid>
           </div>
-        </div>
 
         <Grid
           item
@@ -110,6 +95,9 @@ const portfolio: React.FC<portfolioProps> = ({ jobs }) => {
           lg={12}
           textAlign="center"
           justifyContent="center"
+          marginLeft="20%"
+          marginRight='20%'
+          marginTop='5%'
         >
           <Typography style={{ fontSize: 24, paddingBottom: "2%", fontWeight: 300, margin: 10 }}>
             Residential or commercial, big or small, Melnick & Son’s has you

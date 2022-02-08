@@ -27,6 +27,12 @@ const jobSchema = {
         description: "The text used for the url, cannot contain spaces, MUST be unique",
       },
       {
+        title: "Testimony",
+        name: "Testimony",
+        type: "text",
+        description: "Job Testimony",
+      },
+      {
         title: "Featured",
         name: "Featured",
         type: "boolean",
