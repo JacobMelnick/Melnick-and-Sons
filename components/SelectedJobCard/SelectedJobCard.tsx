@@ -9,11 +9,10 @@ import JobImages from "./JobImages";
 
 const useStyles = makeStyles(
   (theme) => ({
-    root: {
-    },
+    root: {},
     background: {
       backgroundRepeat: "no-Repeat",
-      backgroundSize:  'cover',
+      backgroundSize: "cover",
       backgroundPosition: "center",
       width: "100%",
       height: "90%",
@@ -71,9 +70,8 @@ const JobCard: React.FC<JobCardProps> = ({
                 <div className={classes.imageText}>
                   <div
                     style={{
-                        padding: 10,
-                        textAlign: "center",
-                       
+                      padding: 10,
+                      textAlign: "center",
                       backgroundColor: "rgba(000, 0, 0, 0.4)",
                     }}
                   >
