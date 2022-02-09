@@ -4,7 +4,7 @@ import { Grid, Typography } from "@material-ui/core";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import { NextLinkComposed } from "../../components/Link/Link";
-import Button from "@material-ui/core/Button";
+import { Button } from '@mui/material';
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -77,6 +77,8 @@ const JobCard: React.FC<JobCardProps> = ({
               </Typography>
             </Grid>
             <Grid item xs={12}>
+
+              {/* @ts-ignore */}
               <Button
                 variant="text"
                 size="small"
@@ -101,6 +103,7 @@ const JobCard: React.FC<JobCardProps> = ({
               </Typography>
             </Grid>
             <Grid item xs={12}>
+               {/* @ts-ignore */}
               <Button
                 variant="text"
                 size="small"
