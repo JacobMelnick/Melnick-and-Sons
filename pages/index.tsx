@@ -170,7 +170,7 @@ export default function Home(props) {
           alignItems="flex-start"
           style={{ paddingBottom: "5%", paddingTop: "3%" }}
         >
-          <Grid item xs={12} md={4} container spacing={2}>
+          <Grid item xs={12} md={6} lg={4} container spacing={2} >
             <Grid item xs={12}>
               <Typography
                 variant="h6"
@@ -186,6 +186,7 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
+                  padding: "0px 20px"
                 }}
               >
                 Since 2009, we’ve completed over 350 jobs for various local
@@ -213,6 +214,8 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
+                  padding: "0px 20px"
+
                 }}
               >
                 As a local, family owned business, we are passionate about
@@ -238,6 +241,8 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
+                  padding: "0px 20px"
+
                 }}
               >
                 For more information on our services, please visit our contact
