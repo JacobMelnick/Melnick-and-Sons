@@ -2324,6 +2324,11 @@ make-error@^1.3.0:
   resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
+material-ui-player@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/material-ui-player/-/material-ui-player-1.0.5.tgz#3b602b80cf81ceaacd4a1da5a0a576101bb81e51"
+  integrity sha512-eHSAtQcRxFTwXz2G/T1linzvWYmO/ET9Fkmf6nHFLhZS+lmOx0gDHnSq6tsXkuSool/j6hYD70p+FCp2BmgT7w==
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.npmjs.org/md5.js/-/md5.js-1.3.5.tgz"

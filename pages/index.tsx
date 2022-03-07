@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import { makeStyles } from "@material-ui/styles";
-import { Grid, Stack, Typography } from "@material-ui/core";
+import { Grid, Stack, Typography, Card, CardMedia } from "@material-ui/core";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Button from "@mui/material/Button";
 import Link from "next/link";
@@ -62,22 +62,21 @@ const useStyles = makeStyles(
       minHeight: "60px",
       fontSize: 18,
       fontWeight: 240,
-      '& .paintButton' : {
-        overflow: 'hidden',
+      "& .paintButton": {
+        overflow: "hidden",
         width: 0,
         color: "#fff",
-        transition: 'all .5s',
-        marginLeft: 10
+        transition: "all .5s",
+        marginLeft: 10,
       },
       "&:hover": {
         border: 0,
         "& .paintButton": {
-          display: 'initial',
-          color: '#2ea3f2',
-          width: 'initial'
-        }
+          display: "initial",
+          color: "#2ea3f2",
+          width: "initial",
+        },
       },
-
     },
     contact: {
       border: "3px solid #2ea3f2",
@@ -87,20 +86,20 @@ const useStyles = makeStyles(
       minHeight: "60px",
       fontSize: 18,
       fontWeight: 240,
-      '& .contactButton' : {
-        overflow: 'hidden',
+      "& .contactButton": {
+        overflow: "hidden",
         width: 0,
         color: "#fff",
-        transition: 'all .5s',
-        marginLeft: 10
+        transition: "all .5s",
+        marginLeft: 10,
       },
       "&:hover": {
         border: 0,
         "& .contactButton": {
-          display: 'initial',
-          color: '#2ea3f2',
-          width: 'initial'
-        }
+          display: "initial",
+          color: "#2ea3f2",
+          width: "initial",
+        },
       },
     },
     sherwin: {
@@ -109,7 +108,7 @@ const useStyles = makeStyles(
       backgroundSize: "contain",
       backgroundPosition: "center",
       height: 300,
-      maxWidth: '100%'
+      maxWidth: "100%",
     },
     truckHome: {
       backgroundImage: 'url("/images/logos/TrucksHome.jpg")',
@@ -121,12 +120,18 @@ const useStyles = makeStyles(
       paddingTop: 195,
       paddingBottom: 242,
     },
+    media: {
+      padding: 25,
+      height: 500,
+    }
   }),
   { name: "MuiExample_Component" }
 );
 
 export default function Home(props) {
-  const classes = useStyles(props);
+  const classes = useStyles(
+    
+  );
 
   return (
     <Layout>
@@ -152,7 +157,13 @@ export default function Home(props) {
             </Typography>
             <Typography
               variant="h5"
-              style={{ width: "40%", textAlign: "center", fontWeight: 300, fontSize: 18, lineHeight: '1.8em' }}
+              style={{
+                width: "40%",
+                textAlign: "center",
+                fontWeight: 300,
+                fontSize: 18,
+                lineHeight: "1.8em",
+              }}
             >
               At Melnick & Son’s, we believe in superior craftsmanship and
               customer satisfaction above all else. We are a licensed, bonded
@@ -170,7 +181,7 @@ export default function Home(props) {
           alignItems="flex-start"
           style={{ paddingBottom: "5%", paddingTop: "3%" }}
         >
-          <Grid item xs={12} md={6} lg={4} container spacing={2} >
+          <Grid item xs={12} md={6} lg={4} container spacing={2}>
             <Grid item xs={12}>
               <Typography
                 variant="h6"
@@ -186,7 +197,7 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
-                  padding: "0px 20px"
+                  padding: "0px 20px",
                 }}
               >
                 Since 2009, we’ve completed over 350 jobs for various local
@@ -214,8 +225,7 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
-                  padding: "0px 20px"
-
+                  padding: "0px 20px",
                 }}
               >
                 As a local, family owned business, we are passionate about
@@ -241,8 +251,7 @@ export default function Home(props) {
                   fontWeight: 300,
                   textAlign: "center",
                   fontSize: 18,
-                  padding: "0px 20px"
-
+                  padding: "0px 20px",
                 }}
               >
                 For more information on our services, please visit our contact
@@ -254,7 +263,7 @@ export default function Home(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container item xs={12}  style={{ paddingBottom: "4%" }}>
+        <Grid container item xs={12} style={{ paddingBottom: "4%" }}>
           <Stack direction="row">
             <div className={classes.firstHouse}></div>
             <Stack
@@ -268,8 +277,7 @@ export default function Home(props) {
                   fontWeight: 700,
                   color: "white",
                   height: "20%",
-                  marginLeft: '10%'
-
+                  marginLeft: "10%",
                 }}
               >
                 List of Services
@@ -280,7 +288,7 @@ export default function Home(props) {
                   fontWeight: 500,
                   color: "white",
                   width: "75%",
-                  marginLeft: '10%'
+                  marginLeft: "10%",
                 }}
               >
                 Color Consulting, Custom Painting Finish, Deck Staining &
@@ -309,7 +317,6 @@ export default function Home(props) {
               style={{
                 fontWeight: 800,
                 textAlign: "center",
-                // paddingBottom: "1%",
               }}
             >
               Partners
@@ -335,7 +342,9 @@ export default function Home(props) {
             <Link href="paint-selection">
               <Button className={classes.paintButton}>
                 Color Finder
-                <ArrowForwardIosIcon className={'paintButton'}></ArrowForwardIosIcon>
+                <ArrowForwardIosIcon
+                  className={"paintButton"}
+                ></ArrowForwardIosIcon>
               </Button>
             </Link>
           </Grid>
@@ -374,9 +383,33 @@ export default function Home(props) {
             <Link href="/contact-us">
               <Button size="large" className={classes.contact}>
                 Contact Us
-                <ArrowForwardIosIcon className='contactButton'></ArrowForwardIosIcon>
+                <ArrowForwardIosIcon className="contactButton"></ArrowForwardIosIcon>
               </Button>
             </Link>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item xs={12}>
+              <Typography variant="h4" style={{ textAlign: "center" }}>
+                Our Commercial
+              </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Card>
+              <CardMedia
+                component="video"
+                className={classes.media}
+                controls 
+                // src="./myfile.mp4"
+                src={`./images/logos/TODD.mp4`}
+                // autoPlay
+              ></CardMedia>
+            </Card>
           </Grid>
         </Grid>
       </Grid>
