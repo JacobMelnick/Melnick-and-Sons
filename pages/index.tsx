@@ -357,6 +357,7 @@ export default function Home(props) {
           justifyContent="center"
           spacing={5}
           marginTop="3%"
+          
         >
           <Grid item xs={12}>
             <Typography variant="h4" style={{ textAlign: "center" }}>
@@ -366,7 +367,7 @@ export default function Home(props) {
           <Grid item xs={12} md={12} lg={10}>
             <Typography
               variant="h6"
-              style={{ textAlign: "center", fontWeight: 300 }}
+              style={{ textAlign: "center", fontWeight: 300, padding: 10, margin: 10}}
             >
               In 2009, after years in landscaping, Todd Melnick founded Melnick
               & Son’s with the goal of providing quality painting services for
