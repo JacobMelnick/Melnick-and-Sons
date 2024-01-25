@@ -4,6 +4,7 @@ import { Grid, Stack, Typography, Card, CardMedia } from "@material-ui/core";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Button from "@mui/material/Button";
 import Link from "next/link";
+import Image from "next/image";
 
 const useStyles = makeStyles(
   (theme) => ({
@@ -27,6 +28,15 @@ const useStyles = makeStyles(
       height: 600,
       paddingTop: 195,
       paddingBottom: 242,
+    },
+    bestOf: {
+      position: "absolute",
+      backgroundImage: 'url("/images/bestOf/bestOf.jpg")',
+      backgroundRepeat: "no-Repeat",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      width: 500,
+      height: 100,
     },
     firstHouse: {
       backgroundImage: 'url("/images/logos/MainPageHouse1.jpg")',
@@ -123,15 +133,13 @@ const useStyles = makeStyles(
     media: {
       padding: 25,
       height: 500,
-    }
+    },
   }),
   { name: "MuiExample_Component" }
 );
 
 export default function Home(props) {
-  const classes = useStyles(
-    
-  );
+  const classes = useStyles();
 
   return (
     <Layout>
@@ -142,7 +150,7 @@ export default function Home(props) {
               <div
                 style={{
                   padding: 20,
-                  backgroundColor: "rgba(000, 0, 0, 0.2)",
+                  backgroundColor: "rgba(000, 0, 0, 0.3)",
                 }}
               >
                 Painting Just Got A Whole Lot Easier
@@ -152,6 +160,12 @@ export default function Home(props) {
         </div>
         <Grid item xs={12} md={8} lg={12} style={{ paddingTop: "5%" }}>
           <Stack direction="column" spacing={3} alignItems="center">
+            <Image
+              src="/images/bestOf/bestOf.jpg"
+              height={200}
+              width={320}
+              alt="Melnick and Sons"
+            />
             <Typography variant="h2" style={{ fontWeight: 530 }}>
               What We Do
             </Typography>
@@ -357,7 +371,6 @@ export default function Home(props) {
           justifyContent="center"
           spacing={5}
           marginTop="3%"
-          
         >
           <Grid item xs={12}>
             <Typography variant="h4" style={{ textAlign: "center" }}>
@@ -367,7 +380,12 @@ export default function Home(props) {
           <Grid item xs={12} md={12} lg={10}>
             <Typography
               variant="h6"
-              style={{ textAlign: "center", fontWeight: 300, padding: 10, margin: 10}}
+              style={{
+                textAlign: "center",
+                fontWeight: 300,
+                padding: 10,
+                margin: 10,
+              }}
             >
               In 2009, after years in landscaping, Todd Melnick founded Melnick
               & Son’s with the goal of providing quality painting services for
@@ -396,16 +414,16 @@ export default function Home(props) {
           alignItems="center"
         >
           <Grid item xs={12}>
-              <Typography variant="h4" style={{ textAlign: "center" }}>
-                Our Commercial
-              </Typography>
+            <Typography variant="h4" style={{ textAlign: "center" }}>
+              Our Commercial
+            </Typography>
           </Grid>
           <Grid item xs={12}>
             <Card>
               <CardMedia
                 component="video"
                 className={classes.media}
-                controls 
+                controls
                 // src="./myfile.mp4"
                 src={`./images/logos/TODD.mp4`}
                 // autoPlay
