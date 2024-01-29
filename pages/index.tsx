@@ -162,7 +162,7 @@ export default function Home(props) {
           <Stack direction="column" spacing={3} alignItems="center">
             <Image
               src="/images/bestOf/bestOf.jpg"
-              height={200}
+              height={250}
               width={320}
               alt="Melnick and Sons"
             />
