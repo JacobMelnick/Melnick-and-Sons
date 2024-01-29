@@ -164,7 +164,7 @@ export default function Home(props) {
               src="/images/bestOf/bestOf.jpg"
               height={250}
               width={320}
-              alt="Melnick and Sons"
+              alt="Melnick and Son"
             />
             <Typography variant="h2" style={{ fontWeight: 530 }}>
               What We Do
